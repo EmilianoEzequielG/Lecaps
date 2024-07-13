@@ -10,6 +10,7 @@ Lecaps es una libreria que tiene como finalidad calcular a tiempo real las tasas
 
 ``` python 
 pip install Lecaps
+import lecaps
 
 ```
 
@@ -78,10 +79,13 @@ print(S14O4.tasas)
 
 Se incluyen: 
 
-- `days360(end_date = YYYY-MM-DD, today = None)`: Calcula la diferencia de dias en base 360. Si `today`es `None`toma la fecha que arroja la funcion `get_start_date()`
-- `lecaps_vigentes(lecaps_nombres = lista_lecaps)`: Arroja tickets de lecaps vigentes. 
-- `imprimir_tasa_lecaps(lecaps_nombres = lista_lecaps, precios = None)`: Arroja la `TNA`, `TEM` o `TEA`. Se debe incluir un vector de Precios. 
-- `curva_de_tasas(lecaps_list = lista_lecaps, precios = None)`: Arroja la curva de tasas. Se debe incluir un vector de precios. 
+- `lecaps.days360(end_date = YYYY-MM-DD, today = None)`: Calcula la diferencia de dias en base 360. Si `today`es `None`toma la fecha que arroja la funcion `get_start_date()`
+
+- `lecaps.lecaps_vigentes(lecaps_nombres = lista_lecaps)`: Arroja tickets de lecaps vigentes. 
+
+- `lecaps.imprimir_tasa_lecaps(lecaps_nombres = lista_lecaps, precios = None)`: Arroja la `TNA`, `TEM` o `TEA`. Se debe incluir un vector de Precios. 
+
+- `lecaps.curva_de_tasas(lecaps_list = lista_lecaps, precios = None)`: Arroja la curva de tasas. Se debe incluir un vector de precios. 
 
 ``` python 
 precios = [107.60, 105.670, 107.400, 105.280, 102.750, 117.10, 112.950, 103.71, 101.100, 131.150, 115.500, 108.7]
